@@ -1,4 +1,6 @@
 # FFX RNG Tracker
+I forked this after being contacted by [Syo](https://www.twitch.tv/syotv) about updating this for the PS2 JP release.
+
 To use the program download it from the [releases page](https://github.com/Grayfox96/FFX-RNG-tracker/releases), unzip it and open `FFX RNG tracker vXX.XX.XX.exe`.
 
 To install the `ffx_rng_tracker` library run `pip install .` while in the main directory (where `pyproject.toml` is located).
@@ -17,9 +19,6 @@ It's possible to switch to dark theme, use the default theme and change the font
 
 # Notes
 Place personalized notes files (*actions_notes.txt*, *drops_notes.txt*, *yojimbo_notes.txt*, *encounters_notes.csv*, *steps_notes.csv*) in one of the *ffx_rng_tracker_notes/* directories to override default ones. Prepend the notes filename with a seed number (e.g. *3556394350_actions_notes.txt*) to open them when the tracker is open with that specific seed.
-
-# Help
-Contact [Grayfox#4644](https://discordapp.com/users/195955977223143426/) on Discord for help.
 
 # Credits
 Credits to the #big-nerds channel in the [FFX/X-2 Speedruns Discord](https://discord.gg/X3qXHWG) for ideas and useful discussions.
