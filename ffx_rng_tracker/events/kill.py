@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 
-from ..data.constants import Character, EquipmentType, KillType, Rarity
+from ..data.constants import Character, EquipmentType, KillType, Rarity, FOR_KILLER_BONUS
 from ..data.equipment import Equipment, EquipmentDrop
 from ..data.items import ItemDrop
 from ..data.monsters import Monster
@@ -91,7 +91,7 @@ class Kill(Event):
 
         # check if killing with a party member
         # always gives the equipment to that character
-        killer_is_owner_test = rng_equipment_owner % (len(possible_owners) + 3)
+        killer_is_owner_test = rng_equipment_owner % (len(possible_owners) + FOR_KILLER_BONUS)
         if killer_is_owner_test >= len(possible_owners):
             killer_is_owner = True
         else:

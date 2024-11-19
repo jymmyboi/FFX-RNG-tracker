@@ -494,6 +494,7 @@ class GameVersion(StrEnum):
     PS2NA = 'PS2 NA'
     PS2INT = 'PS2 INT'
     HD = 'HD'
+    PS2JP = 'PS2 JP'
 
 
 class SpeedrunCategory(StrEnum):
@@ -565,21 +566,25 @@ BASE_COMPATIBILITY = {
     GameVersion.PS2NA: 50,
     GameVersion.PS2INT: 128,
     GameVersion.HD: 128,
+    GameVersion.PS2JP: 50,
 }
 COMPATIBILITY_MODIFIER = {
     GameVersion.PS2NA: 30,
     GameVersion.PS2INT: 10,
     GameVersion.HD: 10,
+    GameVersion.PS2JP: 30,
 }
 OVERDRIVE_MOTIVATION = {
     GameVersion.PS2NA: 2,
     GameVersion.PS2INT: 20,
     GameVersion.HD: 20,
+    GameVersion.PS2JP: 2,
 }
 GIL_MOTIVATION_MODIFIER = {
     GameVersion.PS2NA: 2,
     GameVersion.PS2INT: 4,
     GameVersion.HD: 4,
+    GameVersion.PS2JP: 2,
 }
 
 ELEMENTAL_AFFINITY_MODIFIERS = {
@@ -699,4 +704,11 @@ COUNTER_TARGET_TYPES = {
     TargetType.COUNTER_CHARACTERS_PARTY,
     TargetType.COUNTER_ALL,
     TargetType.COUNTER_LAST_TARGET,
+}
+
+FOR_KILLER_BONUS = {
+    GameVersion.PS2NA: 3,
+    GameVersion.PS2INT: 3,
+    GameVersion.HD: 3,
+    GameVersion.PS2JP: 1,
 }

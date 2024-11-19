@@ -305,20 +305,24 @@ FRAMES_FROM_BOOT = {
     GameVersion.PS2NA: 60 * 60 * 10,
     GameVersion.PS2INT: 60 * 60 * 10,
     GameVersion.HD: 1,
+    GameVersion.PS2JP: 60 * 60 * 10,
 }
 POSSIBLE_XORED_DATETIMES = {
     GameVersion.PS2NA: [i for i in range(128)],
     GameVersion.PS2INT: [i for i in range(128)],
     GameVersion.HD: [i for i in range(256)],
+    GameVersion.PS2JP: [i for i in range(128)],
 }
 DAMAGE_VALUES_NEEDED = {
     GameVersion.PS2NA: 8,
     GameVersion.PS2INT: 8,
     GameVersion.HD: 3,
+    GameVersion.PS2JP: 8,
 }
 SEEDS_DIRECTORY_PATH = 'ffx_rng_tracker_seeds'
 SEEDS_FILE_PATHS = {
     GameVersion.PS2NA: SEEDS_DIRECTORY_PATH + '/ps2_seeds.dat',
     GameVersion.PS2INT: SEEDS_DIRECTORY_PATH + '/ps2_seeds.dat',
     GameVersion.HD: SEEDS_DIRECTORY_PATH + '/seeds.dat',
+    GameVersion.PS2JP: SEEDS_DIRECTORY_PATH + '/ps2_seeds.dat',
 }
