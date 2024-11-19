@@ -5,6 +5,7 @@ from ..data.equipment import Equipment, EquipmentDrop
 from ..data.items import ItemDrop
 from ..data.monsters import Monster
 from .main import Event
+from ..configs import Configs
 
 
 @dataclass
@@ -91,7 +92,8 @@ class Kill(Event):
 
         # check if killing with a party member
         # always gives the equipment to that character
-        killer_is_owner_test = rng_equipment_owner % (len(possible_owners) + FOR_KILLER_BONUS)
+        killer_is_owner_test = rng_equipment_owner % (len(possible_owners) + FOR_KILLER_BONUS[Configs.game_version]
+)
         if killer_is_owner_test >= len(possible_owners):
             killer_is_owner = True
         else:
